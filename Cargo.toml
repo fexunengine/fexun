@@ -14,7 +14,13 @@ members = [
 [workspace.package]
 edition = "2024"
 version = "0.0.0-placeholder"
-categories = ["game-engines", "2D"]
+categories = [
+    "game-engines",
+    "games",
+    "graphics",
+    "game-development",
+    "rendering",
+]
 keywords = ["fexun", "engine", "visual-novel", "storytelling"]
 homepage = "https://fexunengine.rs"
 repository = "https://github.com/fexunengine/fexun-rs"
