@@ -1,6 +1,7 @@
 [package]
 name = "fexun"
 version = "0.0.0-placeholder"
+description = "Placeholder for the 'fexun' crate of the fexun engine"
 edition.workspace = true
 categories.workspace = true
 keywords.workspace = true
