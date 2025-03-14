@@ -1,0 +1,33 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/fexun",
+    "crates/fexun-animation",
+    "crates/fexun-audio",
+    "crates/fexun-renderer",
+    "crates/fexun-sprites",
+    "crates/fexun-types",
+    "crates/fexun-ui",
+    "crates/fexun-winit",
+] # Don't include crates that serve no purpose yet
+
+[workspace.package]
+edition = "2024"
+version = "0.0.0-placeholder"
+categories = ["game-engines", "2D"]
+keywords = ["fexun", "engine", "visual-novel", "storytelling"]
+homepage = "https://fexunengine.rs"
+repository = "https://github.com/fexunengine/fexun-rs"
+documentation = "https://docs.fexunengine.rs"
+license = "MIT OR Apache-2.0"
+authors = ["fexunengine"]
+
+[workspace.dependencies]
+fexun = { path = "crates/fexun" }
+fexun-animation = { path = "crates/fexun-animation" }
+fexun-audio = { path = "crates/fexun-audio" }
+fexun-renderer = { path = "crates/fexun-renderer" }
+fexun-sprites = { path = "crates/fexun-sprites" }
+fexun-types = { path = "crates/fexun-types" }
+fexun-ui = { path = "crates/fexun-ui" }
+fexun-winit = { path = "crates/fexun-winit" }
