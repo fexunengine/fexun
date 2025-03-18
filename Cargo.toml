@@ -1,6 +1,6 @@
 [workspace]
 resolver = "2"
-members = [
+members = [ "bin",
     "crates/fexun",
     "crates/fexun-animation",
     "crates/fexun-audio",
