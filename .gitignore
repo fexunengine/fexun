@@ -97,3 +97,12 @@ fabric.properties
 .zed
 .vscode
 .idea
+
+# Added by cargo-rush
+.cargorush.toml
+
+# Added by cargo-rush
+.cargorush.toml
+
+# Added by cargo-rush
+.cargorush.toml
