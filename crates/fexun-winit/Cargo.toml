@@ -12,3 +12,11 @@ license.workspace = true
 authors.workspace = true
 
 [dependencies]
+# Internal Dependencies
+fexun-renderer = { path = "../fexun-renderer" }
+
+# Workspace Dependencies
+winit = { workspace = true }
+
+# External Dependencies
+pollster = "0.4.0"

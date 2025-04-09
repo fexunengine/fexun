@@ -1,15 +1,16 @@
 [workspace]
 resolver = "2"
-members = [ "bin",
+members = [
+    "bin",
     "crates/fexun",
-    "crates/fexun-animation",
-    "crates/fexun-audio",
+    # "crates/fexun-animation",
+    # "crates/fexun-audio",
     "crates/fexun-renderer",
-    "crates/fexun-sprites",
-    "crates/fexun-types",
-    "crates/fexun-ui",
+    # "crates/fexun-sprites",
+    # "crates/fexun-types",
+    # "crates/fexun-ui",
     "crates/fexun-winit",
-] # Don't include crates that serve no purpose yet
+]
 
 [workspace.package]
 edition = "2024"
@@ -29,6 +30,7 @@ license = "MIT OR Apache-2.0"
 authors = ["fexunengine"]
 
 [workspace.dependencies]
+# Internal Dependencies
 fexun = { path = "crates/fexun" }
 fexun-animation = { path = "crates/fexun-animation" }
 fexun-audio = { path = "crates/fexun-audio" }
@@ -37,3 +39,7 @@ fexun-sprites = { path = "crates/fexun-sprites" }
 fexun-types = { path = "crates/fexun-types" }
 fexun-ui = { path = "crates/fexun-ui" }
 fexun-winit = { path = "crates/fexun-winit" }
+
+# External Dependencies
+wgpu = { version = "24.0.3", workspace = true }
+winit = { version = "0.30.9", workspace = true }
