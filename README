@@ -1,0 +1,40 @@
+-------------------------------------------
+Introducing 'FeXun', formerly called 'Wave'
+-------------------------------------------
+
+FeXun is a visual novel engine written in Rust
+that emphasizes performance, safety, and ease of use.
+
+The name FeXun is derived from 'Fe',
+the chemical symbol for iron, and 'Xun' (迅, xùn),
+a Chinese term meaning 'swift' or 'fast'.
+
+Our goal is to make FeXun a no-code engine geared
+towards storytellers to create beautiful visual novels
+quickly and efficiently. Using an intuitive interface
+built with Dioxus, you'll never have to deal with
+code or anything similar.
+
+Utilizing the power of Rust, you can implement advanced
+functionality not found in the engine by default.
+Write your own WGSL shaders to further enhance your games.
+FeXun will provide first-class support for
+Windows, Linux, and Android, and second-class
+support for the web as well as Apple platforms.
+
+Here's a short breakdown of what FeXun is and is not:
+
+FeXun is/will be...
+
+...a standalone visual novel engine
+...an alternative to engines like Ren'Py
+...free and open source at all times
+
+FeXun is not/will not be...
+
+...a competitor to other engines like Ren'Py
+...production ready until the first major release (1.0.0)
+...able to create games other than visual novels
+
+Note: FeXun's source is not ready for usage.
+      Expect updates on our soon-to-be-available blog.
