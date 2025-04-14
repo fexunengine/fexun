@@ -41,5 +41,5 @@ fexun-ui = { path = "crates/fexun-ui" }
 fexun-winit = { path = "crates/fexun-winit" }
 
 # External Dependencies
-wgpu = { version = "24.0.3", workspace = true }
+wgpu = { version = "25.0.0", workspace = true }
 winit = { version = "0.30.9", workspace = true }
