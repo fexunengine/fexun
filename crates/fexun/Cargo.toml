@@ -12,10 +12,12 @@ license.workspace = true
 authors.workspace = true
 
 [dependencies]
-fexun-animation = { workspace = true }
-fexun-audio = { workspace = true }
-fexun-renderer = { workspace = true }
-fexun-sprites = { workspace = true }
-fexun-types = { workspace = true }
-fexun-ui = { workspace = true }
+# fexun-animation = { workspace = true }
+# fexun-audio = { workspace = true }
+# fexun-renderer = { workspace = true }
+# fexun-sprites = { workspace = true }
+# fexun-types = { workspace = true }
+# fexun-ui = { workspace = true }
 fexun-winit = { workspace = true }
+# fexun-assets = { workspace = true }
+fexun-logging = { workspace = true }

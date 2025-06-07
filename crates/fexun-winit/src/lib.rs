@@ -47,7 +47,7 @@ impl ApplicationHandler for App<'_> {
     }
 }
 
-pub fn start_wingpu() {
+pub fn start_fexun() {
     let event_loop = EventLoop::new().unwrap();
     event_loop.set_control_flow(ControlFlow::Poll);
 

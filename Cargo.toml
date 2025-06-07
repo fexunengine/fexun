@@ -1,8 +1,10 @@
 [workspace]
-resolver = "2"
+resolver = "3"
 members = [
     "bin",
     "crates/fexun",
+    "crates/fexun-logging",
+    # "crates/fexun-assets",
     # "crates/fexun-animation",
     # "crates/fexun-audio",
     "crates/fexun-renderer",
@@ -39,7 +41,16 @@ fexun-sprites = { path = "crates/fexun-sprites" }
 fexun-types = { path = "crates/fexun-types" }
 fexun-ui = { path = "crates/fexun-ui" }
 fexun-winit = { path = "crates/fexun-winit" }
+fexun-assets = { path = "crates/fexun-assets" }
+fexun-logging = { path = "crates/fexun-logging" }
 
 # External Dependencies
-wgpu = { version = "24.0.3", workspace = true }
-winit = { version = "0.30.9", workspace = true }
+wgpu = "24.0.3"
+winit = "0.30.9"
+
+[profile.release]
+opt-level = "z"
+lto = "fat"
+codegen-units = 1
+debug = false
+panic = "abort"
