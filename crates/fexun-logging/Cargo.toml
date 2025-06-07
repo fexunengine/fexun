@@ -13,6 +13,8 @@ authors.workspace = true
 
 [dependencies]
 bytesize = "2.0.1"
+pollster = "0.4.0"
 sysinfo = "0.35.2"
 tracing = "0.1.41"
 tracing-subscriber = { version = "0.3.19", features = ["env-filter"] }
+wgpu = { workspace = true }

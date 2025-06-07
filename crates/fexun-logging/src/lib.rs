@@ -1,4 +1,5 @@
 use bytesize::ByteSize;
+use pollster::block_on;
 use sysinfo::System;
 use tracing::{self, info};
 use tracing_subscriber::{EnvFilter, fmt};
@@ -15,8 +16,16 @@ pub fn start_logging() {
     fmt().with_env_filter(filter).init();
 
     if sysinfo::IS_SUPPORTED_SYSTEM {
+        let instance = wgpu::Instance::new(&wgpu::InstanceDescriptor::default());
+        let adapter =
+            block_on(instance.request_adapter(&wgpu::RequestAdapterOptions::default())).unwrap();
+        let gpu = adapter.get_info();
+
         let mut system = System::new_all();
         system.refresh_all();
+
+        let cpu = &system.cpus()[0];
+
         info!("Running FeXun Version {}", VERSION);
         info!(
             "System Name: {:?}",
@@ -31,6 +40,8 @@ pub fn start_logging() {
             "Available memory: {}\n",
             ByteSize::b(system.total_memory() as u64)
         );
+        info!("CPU: \"{}\"", cpu.brand());
+        info!("GPU: {:?}", gpu.name);
     } else {
         info!("System cannot be identified. Are you running FeXun on an unsupported platform?");
     }
