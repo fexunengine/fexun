@@ -45,8 +45,8 @@ fexun-assets = { path = "crates/fexun-assets" }
 fexun-logging = { path = "crates/fexun-logging" }
 
 # External Dependencies
-wgpu = "24.0.3"
-winit = "0.30.9"
+wgpu = "25.0.2"
+winit = "0.30.11"
 
 [profile.release]
 opt-level = "z"
