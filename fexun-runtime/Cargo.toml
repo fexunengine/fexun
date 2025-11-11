@@ -1,8 +1,7 @@
 [package]
-name = "fexun-types"
-version = "0.0.0-placeholder"
-description = "Placeholder for the 'fexun-types' crate of the fexun engine"
+name = "fexun-runtime"
 edition.workspace = true
+version.workspace = true
 categories.workspace = true
 keywords.workspace = true
 homepage.workspace = true
@@ -11,4 +10,9 @@ documentation.workspace = true
 license.workspace = true
 authors.workspace = true
 
+[lib]
+crate-type = ["cdylib"]
+name = "fexun_runtime"
+
 [dependencies]
+fexun-core = { path = "../fexun-core" }

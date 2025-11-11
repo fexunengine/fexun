@@ -1,17 +1,8 @@
 [workspace]
 resolver = "3"
 members = [
-    "bin",
-    "crates/fexun",
-    "crates/fexun-logging",
-    # "crates/fexun-assets",
-    # "crates/fexun-animation",
-    # "crates/fexun-audio",
-    "crates/fexun-renderer",
-    # "crates/fexun-sprites",
-    # "crates/fexun-types",
-    # "crates/fexun-ui",
-    "crates/fexun-winit",
+    "fexun-core",
+    "fexun-runtime"
 ]
 
 [workspace.package]
@@ -30,27 +21,3 @@ repository = "https://github.com/fexunengine/fexun-rs"
 documentation = "https://docs.fexunengine.rs"
 license = "MIT OR Apache-2.0"
 authors = ["fexunengine"]
-
-[workspace.dependencies]
-# Internal Dependencies
-fexun = { path = "crates/fexun" }
-fexun-animation = { path = "crates/fexun-animation" }
-fexun-audio = { path = "crates/fexun-audio" }
-fexun-renderer = { path = "crates/fexun-renderer" }
-fexun-sprites = { path = "crates/fexun-sprites" }
-fexun-types = { path = "crates/fexun-types" }
-fexun-ui = { path = "crates/fexun-ui" }
-fexun-winit = { path = "crates/fexun-winit" }
-fexun-assets = { path = "crates/fexun-assets" }
-fexun-logging = { path = "crates/fexun-logging" }
-
-# External Dependencies
-wgpu = "25.0.2"
-winit = "0.30.11"
-
-[profile.release]
-opt-level = "z"
-lto = "fat"
-codegen-units = 1
-debug = false
-panic = "abort"
