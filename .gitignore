@@ -89,6 +89,3 @@ fabric.properties
 
 # Visual Studio Code related directories
 .vscode
-
-# Build related directories
-package
