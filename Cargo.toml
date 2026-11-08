@@ -1,7 +1,12 @@
-[package]
-name = "FeXun"
+[workspace]
+resolver = "3"
+members = ["crates/fexun-*", "bin"]
+default-members = ["crates/fexun-core", "bin"]
+
+[workspace.package]
 edition = "2024"
 version = "0.0.0-placeholder"
+rust-version = "1.99.1"
 categories = [
     "game-engines",
     "games",
@@ -11,7 +16,25 @@ categories = [
 ]
 keywords = ["fexun", "engine", "visual-novel", "storytelling"]
 homepage = "https://fexunengine.rs"
-repository = "https://github.com/fexunengine/fexun-rs"
-documentation = "https://docs.fexunengine.rs"
+repository = "https://github.com/fexunengine/fexun"
+documentation = "https://docs.rs/fexun"
 license = "MIT OR Apache-2.0"
 authors = ["fexunengine"]
+
+[workspace.dependencies]
+bevy = { version = "0.20.1", default-features = false }
+
+[profile.dev]
+opt-level = 1
+
+[profile.dev.package."*"]
+opt-level = 3
+
+[profile.release]
+codegen-units = 1
+lto = "thin"
+
+[profile.wasm-release]
+inherits = "release"
+opt-level = "s"
+strip = "debuginfo"

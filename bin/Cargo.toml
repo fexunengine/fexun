@@ -1,0 +1,18 @@
+[package]
+name = "fexun-app"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+publish = false
+
+[[bin]]
+name = "fexun"
+path = "main.rs"
+
+[features]
+dev-dylib = ["bevy/dynamic_linking"]
+
+[dependencies]
+bevy.workspace = true
+fexun = { path = "/crates/fexun-core" }

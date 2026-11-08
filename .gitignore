@@ -89,3 +89,6 @@ fabric.properties
 
 # Visual Studio Code related directories
 .vscode
+
+# My own shit
+PRIVATE-README.md

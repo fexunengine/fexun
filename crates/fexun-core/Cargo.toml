@@ -1,0 +1,18 @@
+[package]
+name = "fexun"
+version = "0.1.0"
+description = "A Bevy plugin for building visual novels with FeXun."
+readme = "../../README.md"
+include = ["src/**", "LICENSE-MIT", "LICENSE-APACHE"]
+edition.workspace = true
+rust-version.workspace = true
+categories.workspace = true
+keywords.workspace = true
+homepage.workspace = true
+repository.workspace = true
+documentation.workspace = true
+license.workspace = true
+authors.workspace = true
+
+[dependencies]
+bevy = { workspace = true, features = ["2d", "ui", "audio"] }
